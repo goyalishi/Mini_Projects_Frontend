@@ -1,0 +1,94 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+   height: 100vh;
+   width: 100vw;
+   background-color: #1c1c1c; 
+}
+
+#container{
+    height: 100vh;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+input{
+    background-color: #1c1c1c;
+    border:0;
+    outline:none;
+    font-size: 64px;
+    color:white;
+    padding: 0px 32px;
+    flex-grow:1;
+    text-align: right;
+   
+
+}
+
+.button-grid{
+
+    display:grid;
+    grid-template-rows:repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr) ;
+    gap: 4px;
+    flex-grow: 1;
+}
+
+button{
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    place-self: center;
+    border:0;
+    font-size: 28px;
+    cursor: pointer;
+    color:white;
+    background-color: #505050;
+    transition-duration: 200ms;
+}
+
+.zero{
+    border-radius: 35%;
+    grid-column: span 2;
+
+}
+
+button:active{
+    transform:scale(.85);
+    
+}
+
+.gray-button{
+    color:black;
+    background-color: gray;
+}
+
+.yellow-button{
+    background-color: orange;
+    font-size: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
