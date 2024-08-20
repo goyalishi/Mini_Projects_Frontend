@@ -1,7 +1,7 @@
 
 let contEle=document.querySelector('.container');
 
-const careers=[' Web Developer','Artist','Engineer','Krishna Bhakt']
+const careers=['Web Developer','Artist','Engineer','Krishna Bhakt']
 
 let careerIdx=0;
 let charIdx=0;
