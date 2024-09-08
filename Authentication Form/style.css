@@ -1,0 +1,241 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    height: 100%; 
+    width: 100%; 
+}
+
+#image {
+    height: 0;
+    width: 0;
+    border-radius: 5%;
+    object-fit: cover; 
+    animation: expand 3s forwards, slide-right 2s forwards 4s; 
+}
+
+
+@keyframes expand {
+    from {
+        height: 0;
+        width: 0;
+    }
+    to {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+@keyframes slide-right {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(50%);
+    }
+}
+
+.logo {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    visibility: hidden; 
+    animation: pop-in 0s forwards 4s, diagonal 2s forwards 4s;
+}
+
+
+@keyframes pop-in {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+
+
+@keyframes diagonal {
+    from {
+        top: 50%;
+        left: 50%;
+    }
+    to {
+        top: 5%;
+        left: 5%;
+    }
+}
+
+.form-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50vw; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    animation: slide-up 2s forwards 5s; 
+}
+
+
+@keyframes slide-up {
+    from {
+        top: 100%;
+        visibility: hidden;
+    }
+    to {
+        top: 0;
+        visibility: visible;
+    }
+}
+
+
+
+.slide-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 15px;
+}
+
+
+
+form h2{
+text-align: center;
+font-size: 40px;
+}
+form p{
+    color: gray;
+    text-align: center;
+}
+
+input[type="email"],input[type="password"]{
+    border-radius:10px ;
+    padding: 15px;
+    border: none;
+
+}
+
+input[type="email"]:active,input[type="password"]:active{
+    border-radius:10px ;
+    padding: 15px;
+    border: none;
+    border-color: green;
+
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 20px; 
+}
+
+#submit-btn{
+    padding:15px ;
+    cursor: pointer;
+    background-color: rgb(29, 142, 29);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+    
+
+.spinner {
+    border: 3px solid #f3f3f3; 
+    border-top: 3px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-50%,-50%);
+    visibility: hidden; 
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+#submit-btn.spinner-active .button-text {
+    visibility: hidden; 
+}
+
+
+@keyframes slide-down {
+    from {
+        top: 0;
+    }
+    to {
+        top: 100%;
+    }
+}
+
+
+@keyframes shrink-and-disappear {
+    from {
+        height: 100%;
+        width: 100%;
+    }
+    to {
+        height: 0;
+        width: 0;
+    }
+}
+
+
+@keyframes pop-in-center {
+    from {
+        top: 5%;
+        left: 5%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.form-container {
+    visibility: hidden;
+    top: 100%;
+}
