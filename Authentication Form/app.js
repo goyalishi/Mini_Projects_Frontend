@@ -1,13 +1,15 @@
-document.getElementById('submit-btn').addEventListener('click', function(event) {
+document.getElementById('submit-btn').addEventListener('submit', function(event){
     event.preventDefault(); 
+})
 
+
+document.getElementById('submit-btn').addEventListener('click', function(event) {
     var button = document.getElementById('submit-btn');
     var spinner = button.querySelector('.spinner');
     var buttonText = button.querySelector('.button-text');
     var formContainer = document.querySelector('.form-container');
     var bgImage = document.getElementById('image');
     var logo = document.querySelector('.logo');
-
     
     buttonText.style.visibility = 'hidden';
     spinner.style.visibility = 'visible';
